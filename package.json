@@ -1,0 +1,26 @@
+{
+  "name": "araqueheinz_dws2_validationform",
+  "version": "1.0.0",
+  "description": "Heinz Araque\r Project: Accessibility and Advanced Form Validation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/araqueheinz/AraqueHeinz_DWS2_ValidationForm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/araqueheinz/AraqueHeinz_DWS2_ValidationForm/issues"
+  },
+  "homepage": "https://github.com/araqueheinz/AraqueHeinz_DWS2_ValidationForm#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.23.6"
+  }
+}
