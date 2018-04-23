@@ -19,9 +19,21 @@
   margin-right: auto;
   width: 50%; }
 
-.wrong-input {
-  z-index: 2;
-  content: ""; }
+.wrong-input::after {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: lighter;
+  color: #ededed;
+  padding: 0.5rem;
+  background-color: #747373;
+  position: absolute;
+  left: 10rem;
+  top: -0.3rem;
+  width: 7rem;
+  height: 1.8rem;
+  content: "Wrong input, please try again!"; }
 
 /* /////////////////////////////////////////////////////////////////////// */
 /* /                              FORM                                   / */
@@ -191,6 +203,7 @@ form > fieldset > legend {
   margin-top: 1rem;
   margin-left: 0.8rem; }
   #user-info label {
+    position: relative;
     font-size: 0.8rem;
     font-weight: bold; }
   #user-info div {
@@ -213,11 +226,15 @@ form > fieldset > legend {
 #shipping-info {
   border: none;
   margin-top: 1rem;
-  margin-left: 0.8rem; }
-  #shipping-info div {
-    float: left;
-    width: 33.33333%; }
+  margin-left: 0.8rem;
+  position: relative; }
+  #shipping-info input {
+    display: block; }
+  #shipping-info select {
+    display: block;
+    margin-top: 0.8rem; }
   #shipping-info label {
+    position: relative;
     font-size: 0.8rem;
     font-weight: bold; }
 

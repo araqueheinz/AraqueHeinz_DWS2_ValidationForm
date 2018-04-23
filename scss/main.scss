@@ -25,10 +25,26 @@
 }
 
 .wrong-input{
-    
-    z-index: 2;
-    content: "";
 
+    &::after{
+        display: block;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        text-align: center;
+        font-weight: lighter;
+        color: rgb(237, 237, 237);
+
+        padding: 0.5rem;
+        background-color: rgb(116, 115, 115);
+       
+       
+        position: absolute;
+        left: 10rem;
+        top: -0.3rem;
+        width: 7rem;
+        height: 1.8rem;
+        content: "Wrong input, please try again!";
+    }
 }
 
 /* /////////////////////////////////////////////////////////////////////// */
@@ -263,8 +279,10 @@ form > fieldset > legend{
 
 #Shipping-details{
     background-color: rgb(245, 242, 242);
+    
 
     input{
+        
         border: none;
         background: none;
         border-bottom: solid 2px #474544;
@@ -277,6 +295,7 @@ form > fieldset > legend{
            
         }
         label{
+            
             font-size: 0.8rem;
             font-weight: bold;
         }
@@ -290,6 +309,7 @@ margin-top: 1rem;
 margin-left: 0.8rem;
 
     label{
+        position: relative;
         font-size: 0.8rem;
         font-weight: bold;
     }
@@ -326,21 +346,19 @@ margin-left: 0.8rem;
     border: none;
     margin-top: 1rem;
     margin-left: 0.8rem;
+    position: relative;
 
-    div{
-        float: left;
-        width: (100%/3- 3rem);
-
-        input{
-            width: calc(100%/3);
-        }
-
-
-
+    input{
+        display: block;
     }
-   
+
+    select{
+        display: block;
+        margin-top: 0.8rem;
+    }
 
     label{
+        position: relative;
         font-size: 0.8rem;
         font-weight: bold;
     }
