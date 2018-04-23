@@ -1,0 +1,354 @@
+/* /////////////////////////////////////////////////////////////////////// */
+/* /                         MASTER CONTROLS                             / */
+/* /////////////////////////////////////////////////////////////////////// */
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+[type="radio"] {
+    display: none;
+}
+
+/* /////////////////////////////////////////////////////////////////////// */
+/* /                         MASTER CLASSES                              / */
+/* /////////////////////////////////////////////////////////////////////// */
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.wrong-input{
+    
+    z-index: 2;
+    content: "";
+
+}
+
+/* /////////////////////////////////////////////////////////////////////// */
+/* /                              FORM                                   / */
+/* /////////////////////////////////////////////////////////////////////// */
+
+form{
+    
+    display: flex;
+    flex-direction: column;
+  
+    
+    @media (min-width:900px){
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+form > fieldset{
+    width: calc(100%/3);
+    border:none;
+    border-radius: 2%;
+    margin-top: 1rem;
+
+   
+}
+
+form > fieldset > legend{
+    font-size: 1.8rem;
+    display: block;
+    font-weight: lighter;
+    margin-bottom: 2rem;
+    margin-left: 0.5rem;
+    position: relative;
+    top: 1.5rem;
+} 
+
+/* /////////////////////////////////////////////////////////////////////// */
+/* /                         FIELDSET PRODUCT                            / */
+/* /////////////////////////////////////////////////////////////////////// */
+
+#price{
+    font-weight: bold;
+    color: rgb(54, 53, 53);
+    text-align: end;
+    margin-right: 1rem;
+}
+
+
+/* FIELDSET COLOR
+        ==================================================
+        ================================================== */
+
+
+
+#phone-case{
+    padding: 1rem;
+    height: 400px;
+    width: 200px;
+}
+
+#color{
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: none;
+    width: 100%;
+
+    legend{
+        margin-bottom: 0.2rem;
+        text-align: end;
+        margin-left: 0.5rem;
+    }
+    
+    label {
+        
+        display: inline-block;
+        text-indent: -99999999px; 
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    
+    }
+    
+}  
+
+/**** BLUE Radio button code ****/
+#blue + label {
+    background: rgb(26, 64, 124);
+    transform: scale(0.5);
+
+    &:hover{
+        border: 1px solid black;
+    }
+   
+}
+
+#blue:checked + label {
+    transform: scale(1);
+
+}
+
+/**** RED Radio button code ****/
+#red + label {
+    background: rgb(237, 103, 103);
+    transform: scale(0.5);
+
+    &:hover{
+        border: 1px solid black;
+    }
+   
+}
+
+#red:checked + label {
+    transform: scale(1);
+
+}
+
+/**** GREEN Radio button code ****/
+#green + label {
+    background: rgb(166, 255, 148);
+    transform: scale(0.5);
+
+    &:hover{
+        border: 1px solid black;
+    }
+   
+}
+
+#green:checked + label {
+    transform: scale(1);
+    
+}
+
+/**** Pink Radio button code ****/
+#pink + label {
+    background: rgb(255, 193, 243);
+    transform: scale(0.5);
+
+    &:hover{
+        border: 1px solid black;
+    }
+   
+}
+
+#pink:checked + label {
+    transform: scale(1);    
+   
+}
+
+
+
+/* FIELDSET IPHONE SERIES
+        ==================================================
+        ================================================== */
+
+#Iphone_series{
+    
+    
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: none;
+    width: 100%;
+
+    legend{
+        margin-bottom: 0.2rem;
+        text-align: end;
+        margin-left: 0.5rem;
+        
+    }
+    
+    label {
+       
+        font-weight: lighter;
+        display: inline-block;
+        background-color: rgb(214, 212, 210);
+        width: 5rem;
+        height: 3rem;
+        margin: 0.5rem;
+        padding-top: 1rem; 
+    
+    }
+}
+
+/**** iPhone 6 Radio button code ****/
+#iphone-6 + label {
+
+    &:hover{
+        border: 1px solid black;
+    }
+}
+
+#iphone-6:checked + label {
+    border: 1px solid black; 
+
+}  
+
+/**** iPhone 7 Radio button code ****/
+#iphone-7 + label {
+
+    &:hover{
+        border: 1px solid black;
+    }
+}
+
+#iphone-7:checked + label {
+    border: 1px solid black;
+
+}  
+
+/**** iPhone 8 Radio button code ****/
+#iphone-8 + label {
+
+    &:hover{
+        border: 1px solid black;
+    }
+}
+
+#iphone-8:checked + label {
+    border: 1px solid black;
+
+}  
+
+
+/* /////////////////////////////////////////////////////////////////////// */
+/* /                         FIELDSET USER INFO                          / */
+/* /////////////////////////////////////////////////////////////////////// */
+
+
+#Shipping-details{
+    background-color: rgb(245, 242, 242);
+
+    input{
+        border: none;
+        background: none;
+        border-bottom: solid 2px #474544;
+        display: block;
+        height: 1.8rem;
+        margin-bottom: 0.8rem;
+    
+        &:focus{
+            outline-width: 0;
+           
+        }
+        label{
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+    
+    }
+}
+
+#user-info{
+border: none;
+margin-top: 1rem;
+margin-left: 0.8rem;
+
+    label{
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    div{
+        float: left;
+        width: calc(100%/2);
+
+        &::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        
+    }
+}
+
+#address{
+    width:90%;
+}
+
+#address_2{
+    width:90% 
+}
+
+/* FIELDSET SHIPPING INFO
+        ==================================================
+        ================================================== */
+
+        
+
+ #shipping-info{
+    border: none;
+    margin-top: 1rem;
+    margin-left: 0.8rem;
+
+    div{
+        float: left;
+        width: (100%/3- 3rem);
+
+        input{
+            width: calc(100%/3);
+        }
+
+
+
+    }
+   
+
+    label{
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+
+}
+
+/* /////////////////////////////////////////////////////////////////////// */
+/* /                         FIELDSET USER INFO                          / */
+/* /////////////////////////////////////////////////////////////////////// */
+

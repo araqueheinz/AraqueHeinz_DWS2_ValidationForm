@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title></title>
@@ -9,58 +9,112 @@
     </head>
 
     <body>
-        <section id="Form">
+        <section id="form-product">
 
             <form action="">
-                <fieldset>
+
+                <fieldset id="product">
 
                     <legend>iPhone Cases</legend>
 
-                    <img id="phone-case" src="images/Iphone6_Blue.png" alt="Blue phone case picture">
-                    <h2 id="price">$120M</h2>
+                    <img id="phone-case" class="center" src="images/Iphone6_Blue.png" alt="Blue phone case picture">
+                    <h2 id="price" >$13.00</h2>
 
-                    <fieldset id="color">
-                            <legend>Select phonce case color</legend>
+                    <fieldset id="color" class="center">
+                            <legend>Select color</legend>
                             
-                            <label  for="blue">Blue</label>
                             <input type="radio" id="blue" name="cases" value="blue" checked="checked">
+                            <label  for="blue">Blue</label>
                             
-                            <label  for="red">Red</label>
                             <input type="radio" id="red" name="cases" value="red">
+                            <label  for="red">Red</label>
                             
-                            <label  for="green">Green</label>
                             <input type="radio" id="green" name="cases" value="green">
+                            <label  for="green">Green</label>
                             
-                            <label  for="pink">Pink</label>
                             <input type="radio" id="pink" name="cases" value="pink">
+                            <label  for="pink">Pink</label>
     
                         </fieldset>
                     
-                    <fieldset id="Iphone_series">
-                        <legend>Select phone case size</legend>
+                    <fieldset id="Iphone_series" class="center">
+                        <legend>Select phone</legend>
 
-                            <label  for="iphone-6">iPhone 6</label>
                             <input type="radio" id="iphone-6" name="type" value="iPhone 6" checked="checked">
+                            <label  for="iphone-6">iPhone 6</label>
                             
-                            <label  for="iphone-7">iPhone 7</label>
                             <input type="radio" id="iphone-7" name="type" value="iPhone 7">
+                            <label  for="iphone-7">iPhone 7</label>
                             
-                            <label  for="iphone-8">iPhone 8</label>
                             <input type="radio" id="iphone-8" name="type" value="iPhone 8">
-                            
-                            <label  for="iphone-8-plus">iPhone 8 plus</label>
-                            <input type="radio" id="iphone-8-plus" name="type" value="iPhone 8 plus">
-
+                            <label  for="iphone-8">iPhone 8</label>
+                        
                     </fieldset>
 
                 </fieldset>
 
-                <fieldset>
+                <fieldset id="Shipping-details">
                     
+                    <legend>Shipping Details</legend>
+                    <fieldset id="user-info">
+                            
+                            <label  for="name">Full Name</label>
+                            <input type="text" id="name" name="name">
+
+                            <label  for="email">Email</label>
+                            <input type="email" id="email" name="email">
+
+                            <div >
+                                    <label  for="address">Address</label>
+                                    <input type="text" id="address" name="address">
+                                
+                            </div>
+                            <div>
+                                <label  for="address_2">Address 2</label>
+                                <input type="text" id="address_2" name="address_2">
+
+                            </div>
+                                
+
+                    </fieldset>
+
+                    <fieldset id="shipping-info">
+
+                          <div>
+                                <label  for="city">City</label>
+                                <input type="text" id="city" name="city">
+                          </div>
+                          
+                          <div>
+                                <label  for="state">State</label>
+                                <input type="text" id="state" name="state">
+                          </div>
+                          <div>
+                              <label  for="zip">Zip</label>
+                              <input type="text" id="zip" name="zip">
+                          </div>
+        
+                        
+
+
+    
+                            <label  for="country">Country</label>
+                            <select name="country" id="country"></select>
+                        
+                    </fieldset>
 
                 </fieldset>
 
+                <fieldset id="order-summary">
+                    <legend>Order Summary</legend>
 
+                    
+                    <p id="selected-product">Case color: Blue</p>
+                    <p id="selected-phone">For: iPhone 6</p>
+                    <p id="shipping"></p>
+
+
+                </fieldset>
 
             </form>
         
