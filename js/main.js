@@ -77,7 +77,7 @@ document.getElementById('email').addEventListener('blur', function(event){
 
     const validation = patt.test(userEmail);
     if(validation){
-        document.querySelector('label[for=email]').classList.toggle('wrong-input');
+        document.querySelector('label[for=email]').classList.remove('wrong-input');
 
     }
     else{
@@ -101,7 +101,7 @@ document.getElementById('zip').addEventListener('blur', function(event){
 
     const validation = patt.test(userZip);
     if(validation){
-        document.querySelector('label[for=zip]').classList.toggle('wrong-input');
+        document.querySelector('label[for=zip]').classList.remove('wrong-input');
     }
     else{
         document.querySelector('label[for=zip]').classList.add('wrong-input');
