@@ -57,17 +57,18 @@ document.getElementById('iphone-8').addEventListener('click',function(){
 /* /////////////////////////////////////////////////////////////////////// */
 
 
-let allowSubmit = false;
-var userAddress = document.getElementById('address').value;
-var userCity = document.getElementById('city').value;
-var userState = document.getElementById('state').value;
-
-var userCountry = document.getElementById('country').value;
 
 document.getElementById('name').addEventListener('blur', function(event){
    
     var userName = document.getElementById('name').value;
-    document.getElementById('name-address').innerHTML = userName;;
+
+    if(userName){
+        document.querySelector('label[for=name]').classList.remove('wrong-input');
+        document.getElementById('name-address').innerHTML = userName;
+    }
+    else{
+        document.querySelector('label[for=name]').classList.add('wrong-input');   
+    }
 })
 
 document.getElementById('email').addEventListener('blur', function(event){
@@ -85,21 +86,62 @@ document.getElementById('email').addEventListener('blur', function(event){
         document.querySelector('label[for=email]').classList.add('wrong-input');
     }
 
+})
 
+
+document.getElementById('address').addEventListener('blur', function(event){
+    var userAddress = document.getElementById('address').value;
+
+    if(userAddress){
+        document.querySelector('label[for=address]').classList.remove('wrong-input');
+        
+    }
+    else{
+        document.querySelector('label[for=address]').classList.add('wrong-input');   
+    }
 
 })
+
+
 document.getElementById('city').addEventListener('blur', function(event){
+
+    var userCity = document.getElementById('city').value;
+    const patt = /^([A-Z][-a-zA-Z]+)+(?:[\s-][A-Z][-a-zA-Z]+){0,2}$/gm;
+    const validation = patt.test(userCity);
+    console.log(validation);
     
+    if(validation){
+        document.querySelector('label[for=city]').classList.remove('wrong-input');
+    }
+    else{
+        document.querySelector('label[for=city]').classList.add('wrong-input');
+    }
+
 })
+
 document.getElementById('state').addEventListener('blur', function(event){
-    
+
+    var userState = document.getElementById('state').value.toUpperCase();
+    console.log(userState);
+    const patt = /^((A[AEKLPRSZ])|(C[AOT])|(D[EC])|(F[LM])|(G[AU])|(HI)|(I[ADLN])|(K[SY])|(LA)|(M[ADEHINOST])|(N[CDEHJMVY])|(MP)|(O[HKR])|(P[ARW])|(RI)|(S[CD])|(T[NX])|(UT)|(V[AIT])|(W[AIVY]))$/gm;
+    const validation = patt.test(userState);
+    console.log(validation);
+
+    if(validation){
+        document.querySelector('label[for=state]').classList.remove('wrong-input');
+    }
+    else{
+        document.querySelector('label[for=state]').classList.add('wrong-input');
+    }
+
 })
+
 document.getElementById('zip').addEventListener('blur', function(event){
 
     var userZip = document.getElementById('zip').value;
     const patt = /^\d{5}(\-?\d{4})?$/gm;
-
     const validation = patt.test(userZip);
+
     if(validation){
         document.querySelector('label[for=zip]').classList.remove('wrong-input');
     }
@@ -107,6 +149,5 @@ document.getElementById('zip').addEventListener('blur', function(event){
         document.querySelector('label[for=zip]').classList.add('wrong-input');
     }
 
-    
 })
  

@@ -206,19 +206,6 @@ form > fieldset > legend {
     position: relative;
     font-size: 0.8rem;
     font-weight: bold; }
-  #user-info div {
-    float: left;
-    width: calc(100%/2); }
-    #user-info div::after {
-      content: "";
-      display: block;
-      clear: both; }
-
-#address {
-  width: 90%; }
-
-#address_2 {
-  width: 90%; }
 
 /* FIELDSET SHIPPING INFO
         ==================================================
