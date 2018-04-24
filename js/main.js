@@ -7,7 +7,8 @@
 document.getElementById('blue').addEventListener('click',function(){
     document.getElementById('phone-case').src = 'images/Iphone6_Blue.png';
     document.getElementById('phone-case').alt = 'blue phone case picture';
-    document.getElementById('price').innerHTML = '$13.00';
+    document.getElementById('price').innerHTML = '$13.00';  
+    document.getElementById('total').innerHTML = 'Price: $13.00';   
     document.getElementById('selected-product').innerHTML = 'Case color: Blue';
   
 })
@@ -16,6 +17,7 @@ document.getElementById('red').addEventListener('click',function(){
     document.getElementById('phone-case').src = 'images/Iphone6_Red.png';
     document.getElementById('phone-case').alt = 'Red phone case picture';
     document.getElementById('price').innerHTML = '$15.00';
+    document.getElementById('total').innerHTML = 'Price: $15.00'; 
     document.getElementById('selected-product').innerHTML = 'Case color: Red';
 })
 
@@ -23,6 +25,7 @@ document.getElementById('green').addEventListener('click',function(){
     document.getElementById('phone-case').src = 'images/Iphone6_Green.png';
     document.getElementById('phone-case').alt = 'Green phone case picture';
     document.getElementById('price').innerHTML = '$11.00';
+    document.getElementById('total').innerHTML = 'Price: $11.00'; 
     document.getElementById('selected-product').innerHTML = 'Case color: Green';
 })
 
@@ -30,6 +33,7 @@ document.getElementById('pink').addEventListener('click',function(){
     document.getElementById('phone-case').src = 'images/Iphone6_Pink.png'
     document.getElementById('phone-case').alt = 'Pink phone case picture'
     document.getElementById('price').innerHTML = '$16.00';
+    document.getElementById('total').innerHTML = 'Price: $16.00'; 
     document.getElementById('selected-product').innerHTML = 'Case color: Pink';
 })
 
@@ -64,7 +68,7 @@ document.getElementById('name').addEventListener('blur', function(event){
 
     if(userName){
         document.querySelector('label[for=name]').classList.remove('wrong-input');
-        document.getElementById('name-address').innerHTML = userName;
+        document.getElementById('user-name').innerHTML =`Name: ${userName}`;
     }
     else{
         document.querySelector('label[for=name]').classList.add('wrong-input');   
@@ -79,7 +83,7 @@ document.getElementById('email').addEventListener('blur', function(event){
     const validation = patt.test(userEmail);
     if(validation){
         document.querySelector('label[for=email]').classList.remove('wrong-input');
-
+        document.getElementById('user-email').innerHTML =`<p>Email: ${userEmail}`
     }
     else{
         console.log(validation);
@@ -94,6 +98,7 @@ document.getElementById('address').addEventListener('blur', function(event){
 
     if(userAddress){
         document.querySelector('label[for=address]').classList.remove('wrong-input');
+        document.getElementById('user-address').innerHTML = `<p>Address: ${userAddress}`
         
     }
     else{
@@ -112,6 +117,7 @@ document.getElementById('city').addEventListener('blur', function(event){
     
     if(validation){
         document.querySelector('label[for=city]').classList.remove('wrong-input');
+        document.getElementById('user-city').innerHTML = `<p>City: ${userCity}`
     }
     else{
         document.querySelector('label[for=city]').classList.add('wrong-input');
@@ -151,3 +157,6 @@ document.getElementById('zip').addEventListener('blur', function(event){
 
 })
  
+document.querySelector('form').addEventListener('submit', function(event){
+    event.preventDefault();
+})

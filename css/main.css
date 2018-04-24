@@ -228,3 +228,19 @@ form > fieldset > legend {
 /* /////////////////////////////////////////////////////////////////////// */
 /* /                         FIELDSET USER INFO                          / */
 /* /////////////////////////////////////////////////////////////////////// */
+#order-summary h2 {
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  margin-left: 0.8rem; }
+
+#order-summary p {
+  margin-left: 0.8rem; }
+
+#order-summary button {
+  display: block;
+  position: relative;
+  top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 5rem;
+  height: 2.5rem; }
