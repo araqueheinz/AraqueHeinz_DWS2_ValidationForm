@@ -169,7 +169,7 @@ document.querySelector('form').addEventListener('submit', function(event){
     var userCity = document.getElementById('city').value;
     var userState = document.getElementById('state').value.toUpperCase();
     var userZip = document.getElementById('zip').value;
-    var userCountry = document.getElementById('country').text;
+    var userCountry = document.getElementById('country').value;
 
     var checkEmail = document.querySelector('label[for=email]').classList.length;
     var checkCity = document.querySelector('label[for=city]').classList.length;
@@ -196,5 +196,4 @@ document.querySelector('form').addEventListener('submit', function(event){
     else{
         
     }
-
 })
