@@ -77,6 +77,7 @@ document.getElementById('name').addEventListener('blur', function(event){
 
 document.getElementById('email').addEventListener('blur', function(event){
 
+    
     const userEmail = document.getElementById('email').value;
     const patt = /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/gi;
 
@@ -88,6 +89,7 @@ document.getElementById('email').addEventListener('blur', function(event){
     else{
         console.log(validation);
         document.querySelector('label[for=email]').classList.add('wrong-input');
+        console.log(document.querySelector('label[for=email]').classList.length === 1);
     }
 
 })
@@ -117,7 +119,7 @@ document.getElementById('city').addEventListener('blur', function(event){
     
     if(validation){
         document.querySelector('label[for=city]').classList.remove('wrong-input');
-        document.getElementById('user-city').innerHTML = `<p>City: ${userCity}`
+        document.getElementById('user-city').innerHTML = `<p>City: ${userCity}`;
     }
     else{
         document.querySelector('label[for=city]').classList.add('wrong-input');
@@ -135,6 +137,7 @@ document.getElementById('state').addEventListener('blur', function(event){
 
     if(validation){
         document.querySelector('label[for=state]').classList.remove('wrong-input');
+        document.getElementById('user-state').innerHTML = `<p>State: ${userState}`;
     }
     else{
         document.querySelector('label[for=state]').classList.add('wrong-input');
@@ -150,6 +153,7 @@ document.getElementById('zip').addEventListener('blur', function(event){
 
     if(validation){
         document.querySelector('label[for=zip]').classList.remove('wrong-input');
+        document.getElementById('user-zip').innerHTML = `<p>Zip: ${userZip}`;
     }
     else{
         document.querySelector('label[for=zip]').classList.add('wrong-input');
@@ -159,4 +163,14 @@ document.getElementById('zip').addEventListener('blur', function(event){
  
 document.querySelector('form').addEventListener('submit', function(event){
     event.preventDefault();
+
+    var userName = document.getElementById('name').value;
+    const userEmail = document.getElementById('email').value;
+    var userAddress = document.getElementById('address').value;
+    var userCity = document.getElementById('city').value;
+    var userState = document.getElementById('state').value.toUpperCase();
+    var userZip = document.getElementById('zip').value;
+    var userCountry = document.getElementById('country').text;
+    
+
 })
